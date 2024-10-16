@@ -1,0 +1,10 @@
+.checkout-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.checkout-btn i {
+  margin-left: auto;
+}

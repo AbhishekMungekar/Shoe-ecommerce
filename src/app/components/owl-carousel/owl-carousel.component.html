@@ -1,0 +1,121 @@
+<div class="owl-carousel-container">
+  <div class="d-flex justify-content-start varitey m-2">
+    <button
+      class="rounded m-3 p-3 fw-bold text-light border-0"
+      (click)="adidasSection()"
+      style="background-color: var(--discount-color); outline: none"
+    >
+      Adidas
+    </button>
+    <button
+      class="rounded m-3 p-3 fw-bold text-light border-0"
+      (click)="nikeSection()"
+      style="background-color: var(--discount-color); outline: none"
+    >
+      Nike
+    </button>
+    <button
+      class="rounded m-3 p-3 fw-bold text-light border-0"
+      (click)="nbSection()"
+      style="background-color: var(--discount-color); outline: none"
+    >
+      New Balance
+    </button>
+  </div>
+
+  <swiper-container
+    class="mySwiper"
+    loop="true"
+    autoplay="true"
+    space-between="30"
+    slides-per-view="3"
+    *ngIf="adi"
+  >
+    <swiper-slide *ngFor="let slide of shoesData.adidas" [id]="slide.id">
+      <div class="img-wrapper text-left me-2">
+        <div class="heart-icon text-end px-3 py-2 fs-5">
+          <button class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <img
+          [src]="slide.src"
+          [alt]="slide.alt"
+          [title]="slide.title"
+          class="img-fluid img-width"
+        />
+      </div>
+      <div class="product-price">
+        <p class="price">{{ slide.price | currency : "INR" }}</p>
+      </div>
+      <div class="product-details">
+        <p class="mb-2 fw-bolder">{{ slide.productName }}</p>
+        <p class="mb-2">Originals</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <swiper-container
+    class="mySwiper"
+    loop="true"
+    autoplay="true"
+    space-between="30"
+    slides-per-view="3"
+    *ngIf="nik"
+  >
+    <swiper-slide *ngFor="let slide of shoesData.nike" [id]="slide.id">
+      <div class="img-wrapper text-left me-2">
+        <div class="heart-icon text-end px-3 py-2 fs-5">
+          <button class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <img
+          [src]="slide.src"
+          [alt]="slide.alt"
+          [title]="slide.title"
+          class="img-fluid img-width"
+        />
+      </div>
+      <div class="product-price">
+        <p class="price">{{ slide.price | currency : "INR" }}</p>
+      </div>
+      <div class="product-details">
+        <p class="mb-2 fw-bolder">{{ slide.productName }}</p>
+        <p class="mb-2">Originals</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <swiper-container
+    class="mySwiper"
+    loop="true"
+    autoplay="true"
+    space-between="30"
+    slides-per-view="3"
+    *ngIf="nb"
+  >
+    <swiper-slide *ngFor="let slide of shoesData.newbalance" [id]="slide.id">
+      <div class="img-wrapper text-left me-2">
+        <div class="heart-icon text-end px-3 py-2 fs-5">
+          <button class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <img
+          [src]="slide.src"
+          [alt]="slide.alt"
+          [title]="slide.title"
+          class="img-fluid img-width"
+        />
+      </div>
+      <div class="product-price">
+        <p class="price">{{ slide.price | currency : "INR" }}</p>
+      </div>
+      <div class="product-details">
+        <p class="mb-2 fw-bolder">{{ slide.productName }}</p>
+        <p class="mb-2">Originals</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>

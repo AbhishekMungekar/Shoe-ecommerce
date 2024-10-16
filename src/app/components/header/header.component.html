@@ -1,0 +1,424 @@
+<nav class="navbar navbar-expand-lg navbar-container">
+  <a class="navbar-brand brand-name mx-5" href="#">Shoebite</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-center">
+    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link text-size" aria-current="page" routerLink="/">Men</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-size" routerLink="/about">Women</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-size" routerLink="/contact">Kids</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-size" routerLink="/blog">Sports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-size" routerLink="/blog">Sale</a>
+      </li>
+    </ul>
+    <form class="d-flex ms-auto search-form">
+      <input
+        class="form-control mx-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn search-btn" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <div class="login">
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#loginModal"
+      >
+        <i class="fa-regular fa-user" style="color: var(--secondary-color)"></i>
+      </button>
+    </div>
+    <div class="wishlist-cart">
+      <button type="button" class="btn">
+        <i
+          class="fa-regular fa-heart"
+          style="color: var(--secondary-color)"
+        ></i>
+      </button>
+      <button class="btn">
+        <i
+          class="fa-solid fa-cart-shopping"
+          style="color: var(--secondary-color)"
+        ></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Offcanvas sidebar for mobile view -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasNavbar"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" routerLink="/">Men</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">Women</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">Kids</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/blog">Sports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/blog">Sale</a>
+      </li>
+    </ul>
+    <form class="d-flex mt-3">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <div class="login-wishcart-section d-flex mt-3">
+      <div class="login">
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="fa-regular fa-user" style="color: var(--primary-color)"></i>
+        </button>
+      </div>
+      <div class="wishlist-cart">
+        <button type="button" class="btn">
+          <i
+            class="fa-regular fa-heart"
+            style="color: var(--primary-color)"
+          ></i>
+        </button>
+        <button class="btn">
+          <i
+            class="fa-solid fa-cart-shopping"
+            style="color: var(--primary-color)"
+          ></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  *ngIf="discount"
+  class="discount-color text-light d-flex align-items-center justify-content-between py-1"
+>
+  <marquee
+    behavior="scroll"
+    direction="right"
+    scrollamount="5"
+    style="word-spacing: 10px"
+  >
+    Enjoy a 15% discount on your first order!
+  </marquee>
+  <button
+    (click)="hideDiscount()"
+    class="bg-transparent border-0 text-light px-3"
+  >
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+
+<!-- Model of Popup  for Login -->
+
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between border-0">
+        <h5 class="modal-title fw-bold" id="exampleModalLabel">
+          Login for Free
+        </h5>
+        <button
+          type="button"
+          class="close p-2 rounded-circle close-btn bg-light"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="border: none"
+        >
+          <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+
+            <div
+              class="errors"
+              *ngIf="
+                getControl('email')?.errors && getControl('email')?.touched
+              "
+            >
+              <p
+                *ngIf="getControl('email')?.errors?.['required']"
+                class="error-msg"
+              >
+                This field is required
+              </p>
+              <p
+                *ngIf="getControl('email')?.errors?.['pattern']"
+                class="error-msg"
+              >
+                Please enter valid email
+              </p>
+              <!-- <p *ngIf="getControl('email')?.errors?.['minlength']">
+                Password should be minimum 8
+              </p>
+              <p *ngIf="getControl('email')?.errors?.['maxlength']">
+                Password should be maximum 15
+              </p> -->
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter your password"
+              formControlName="password"
+            />
+
+            <div
+              *ngIf="
+                getControl('password')?.errors &&
+                getControl('password')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getControl('password')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getControl('password')?.errors?.['minlength']"
+              >
+                Password should be minimum 8
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getControl('password')?.errors?.['maxlength']"
+              >
+                Password should be maximum 15
+              </p>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn login-btn w-100 mt-3"
+            [disabled]="loginForm.invalid"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+      <p class="text-center mt-3">
+        Not a Member?
+        <button
+          type="button"
+          class="removed-outline"
+          data-bs-toggle="modal"
+          data-bs-target="#signupModal"
+        >
+          Sign Up
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Model of Popup  for  SignUp -->
+
+<div
+  class="modal fade"
+  id="signupModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between border-0">
+        <h5 class="modal-title fw-bold" id="exampleModalLabel">
+          Sign Up for Free
+        </h5>
+        <button
+          type="button"
+          class="close p-2 rounded-circle close-btn bg-light"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="border: none"
+        >
+          <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
+        </button>
+      </div>
+      <div class="modal-body p-4">
+        <form [formGroup]="signupForm" (ngSubmit)="submitSignup()">
+          <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="signupName"
+              placeholder="Enter your Name"
+            />
+            <div
+              *ngIf="
+                getControlSignUp('signupName')?.errors &&
+                getControlSignUp('signupName')?.touched
+              "
+            >
+              <p class="error-msg" *ngIf="getControlSignUp('signupName')?.errors?.['required']">
+                This field is required
+              </p>
+              <p class="error-msg" *ngIf="getControlSignUp('signupName')?.errors?.['minlength']">
+                Name should be atleast 3 character
+              </p>
+              <p class="error-msg" *ngIf="getControlSignUp('signupName')?.errors?.['maxlength']">
+                Name should be maximum 20 characters
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="signupemail"
+              placeholder="Enter your email"
+            />
+
+            <div
+              class="error"
+              *ngIf="
+                getControlSignUp('signupemail')?.errors &&
+                getControlSignUp('signupemail')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signupemail')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signupemail')?.errors?.['pattern']"
+              >
+                Please enter the valid email
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="signuppassword"
+              placeholder="Enter your password"
+            />
+            <div
+              class="error"
+              *ngIf="
+                getControlSignUp('signuppassword')?.errors &&
+                getControlSignUp('signuppassword')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signuppassword')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signuppassword')?.errors?.['maxlength']"
+              >
+                Password should be maximum 15
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signuppassword')?.errors?.['minlength']"
+              >
+                Password should be minimum 8
+              </p>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn login-btn w-100 mt-3"
+            [disabled]="signupForm.invalid"
+          >
+            SignUp
+          </button>
+        </form>
+      </div>
+      <p class="text-center mt-3">
+        Already Member?
+        <button
+          type="button"
+          class="removed-outline"
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+        >
+          Login
+        </button>
+      </p>
+    </div>
+  </div>
+</div>

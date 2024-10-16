@@ -1,0 +1,257 @@
+<!-- <div class="admin-login-container py-5">
+  <div class="img-fluid admin-bg container p-3 border-10 rounded-4">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div
+        class="col-md-6 login-container text-center rounded-4"
+        style="background-color: #f8f8f882"
+      >
+        <h5 class="mt-5 mb-4">
+          <a class="navbar-brand brand-name" href="#">Shoebite</a>
+        </h5>
+        <h2 class="lh-1 fw-medium my-3">
+          Create <br />
+          account
+        </h2>
+        <form class="text-center m-auto">
+          <div class="">
+            <input
+              type="text"
+              class="input-box py-2 px-3 rounded-5 outline-none"
+              placeholder="Enter the name"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="admin-login-container py-5">
+  <div class="img-fluid admin-bg container p-3 border-10 rounded-4">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div
+        class="col-md-6 login-container text-center rounded-4"
+        style="background-color: #f8f8f882; min-height: 80vh"
+        *ngIf="default"
+      >
+        <h5 class="mt-5 mb-4">
+          <a class="navbar-brand brand-name" href="#">Shoebite</a>
+        </h5>
+        <h2 class="lh-1 fw-medium my-3">
+          Create <br />
+          account
+        </h2>
+        <form
+          class="text-center my-5"
+          [formGroup]="signUpForm"
+          (ngSubmit)="adminSignupData()"
+        >
+          <div class="mb-3">
+            <input
+              type="text"
+              class="input-box py-2 px-3 rounded-5 outline-none"
+              placeholder="Enter your name"
+              formControlName="name"
+            />
+            <div
+              *ngIf="
+                getAdminSignup('name')?.errors &&
+                getAdminSignup('name')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('name')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('name')?.errors?.['minlength']"
+              >
+                Name should be atleast 3 character
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('name')?.errors?.['maxlength']"
+              >
+                Name should be maximum 20 characters
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              class="input-box py-2 px-3 rounded-5 outline-none"
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+            <div
+              class="errors"
+              *ngIf="
+                getAdminSignup('email')?.errors &&
+                getAdminSignup('email')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('email')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('email')?.errors?.['pattern']"
+              >
+                Please enter validate email
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              class="input-box py-2 px-3 rounded-5 outline-none"
+              placeholder="Enter your password"
+              formControlName="password"
+            />
+            <div
+              class="errors"
+              *ngIf="
+                getAdminSignup('password')?.errors &&
+                getAdminSignup('password')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('password')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('password')?.errors?.['minlength']"
+              >
+                Password should be minimum 8 characters
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminSignup('password')?.errors?.['maxlength']"
+              >
+                Passwod should be maximum 15 characters
+              </p>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-dark px-5 py-2 rounded-5 mt-3"
+            [disabled]="signUpForm.invalid"
+          >
+            Sign up
+          </button>
+          <p class="my-3 fw-bold">
+            If you are already admin member ?
+            <button class="btn fw-bold p-0" (click)="login()">
+              Please Login
+            </button>
+          </p>
+        </form>
+      </div>
+      <div
+        class="col-md-6 login-container text-center rounded-4"
+        style="background-color: #f8f8f882; min-height: 80vh"
+        *ngIf="!default"
+      >
+        <h5 class="mt-5 mb-4">
+          <a class="navbar-brand brand-name" href="#">Shoebite</a>
+        </h5>
+        <h2 class="lh-1 fw-medium my-3">
+          Login <br />
+          account
+        </h2>
+        <form
+          class="text-center my-5"
+          [formGroup]="loginForm"
+          (ngSubmit)="adminLoginData()"
+        >
+          <div class="mb-3">
+            <input
+              type="email"
+              class="input-box py-2 px-3 rounded-5 outline-none"
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+            <div
+              class="errors"
+              *ngIf="
+                getAdminlogin('email')?.errors &&
+                getAdminlogin('email')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getAdminlogin('email')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminlogin('email')?.errors?.['pattern']"
+              >
+                Please enter validate email id
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              class="input-box py-2 px-3 rounded-5 outline-none"
+              placeholder="Enter your password"
+              formControlName="password"
+            />
+            <div
+              class="errors"
+              *ngIf="
+                getAdminlogin('password')?.errors &&
+                getAdminlogin('password')?.touched
+              "
+            >
+              <p
+                class="error-msg"
+                *ngIf="getAdminlogin('password')?.errors?.['required']"
+              >
+                This field is required
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminlogin('password')?.errors?.['minlength']"
+              >
+                Password should be minimum 8 characters
+              </p>
+              <p
+                class="error-msg"
+                *ngIf="getAdminlogin('password')?.errors?.['maxlength']"
+              >
+                Password should be maximum 15 characters
+              </p>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-dark px-5 py-2 rounded-5 mt-3"
+            [disabled]="loginForm.invalid"
+          >
+            Login
+          </button>
+          <p class="my-3 fw-bold">
+            If you are already admin member ?
+            <button class="btn fw-bold p-0" (click)="signup()">
+              Please signup
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

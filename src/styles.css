@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Creepster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #f8f8f8;
+  --accent-color: #ffd700;
+  --discount-color: #e67e22;
+  --admin-bg: #eaeded;
+  /* --admin-bg: #d9cab3; */
+}
+.discount-color {
+  background-color: var(--discount-color);
+  color: var(--secondary-color);
+  color: black;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+}
+
+
+
+/* product price  */
+.remove {
+  background-color: var(--secondary-color);
+}
+.price {
+  background-color: green;
+  position: relative;
+  color: white;
+  position: relative;
+  top: -26px;
+  width: 40%;
+  margin-right: auto;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+/* productcard img background color  */
+.img-wrapper {
+  background-color: var(--secondary-color);
+}
+
+/* Carousel css  */
+.owl-carousel .owl-item img {
+  width: 98%;
+}
+.owl-theme .owl-nav {
+  position: absolute;
+  bottom: 100%;
+  right: 0%;
+}

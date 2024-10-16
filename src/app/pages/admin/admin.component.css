@@ -1,0 +1,26 @@
+.content {
+  position: absolute;
+  left: 60px;
+  width: calc(100% - 60px);
+}
+app-admin-sidebar {
+  border-top: 1px solid var(--secondary-color);
+  position: absolute;
+  width: 60px;
+  left: 0;
+  background-color: var(--primary-color);
+  outline: none;
+  color: var(--secondary-color);
+  height: calc(100vh - 4.4rem);
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.sidenav-width {
+  width: 250px;
+}
+.content-width {
+  left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,19 @@
+<div class="sidebar-container">
+  <ul
+    class="navlist list-unstyled"
+    *ngFor="let item of navList"
+    [ngClass]="{ 'sidenav-width': sidenavbar }"
+  >
+    <li
+      class="navlist-item list-data"
+      [routerLink]="item.routerlink"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a class="text-decoration-none">
+        <i class="{{ item.itag }} "></i>
+        <span>{{ item.title }}</span>
+      </a>
+    </li>
+  </ul>
+</div>

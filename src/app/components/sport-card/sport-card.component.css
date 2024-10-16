@@ -1,0 +1,14 @@
+.btn-color {
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.card img {
+  /* width: 500px; */
+  height: 26rem;
+}
+.card-body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}

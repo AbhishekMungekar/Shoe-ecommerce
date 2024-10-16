@@ -1,0 +1,44 @@
+.card-border {
+  border: 2px solid black;
+}
+.quantity .btn-quantity {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.quantity-input {
+  width: 45px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+.cart-img {
+  background-color: var(--secondary-color);
+}
+.close-btn {
+  position: absolute;
+  right: 20px;
+  /* top: 0; */
+}
+
+/* button styling  */
+
+.checkout-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.checkout-btn i {
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .close-btn {
+    text-align: end;
+  }
+}

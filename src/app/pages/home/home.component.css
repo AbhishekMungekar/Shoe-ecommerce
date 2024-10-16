@@ -1,0 +1,8 @@
+.btn-accent {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 42%;
+}

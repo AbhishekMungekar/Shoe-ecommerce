@@ -1,0 +1,50 @@
+.admin-nav {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  /* flex-grow: 1; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.login-user {
+  background-color: var(--accent-color);
+  outline: none;
+}
+.login-user i {
+  color: var(--primary-color);
+font-weight: bold
+}
+
+@media (max-width: 576px) {
+  .nav-content {
+    /* display: block; */
+    width: 100%;
+  }
+  .add-new-btn {
+    font-size: 0.5rem;
+  }
+  .brand-name {
+    /* display: block; */
+    visibility: hidden;
+    width: 0%;
+  }
+  .add-new-btn {
+    width: 120px;
+    font-size: 12px;
+  }
+}

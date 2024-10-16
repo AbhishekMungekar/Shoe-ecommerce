@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": "4898",
+      "email": "abhishek43@gmail.com",
+      "password": "12313651564651"
+    },
+    {
+      "id": "dbb3",
+      "signupName": "abhishek",
+      "signupemail": "abhishekmungekar15@gmail.com",
+      "signuppassword": "1234567897"
+    },
+    {
+      "id": "b80f",
+      "signupName": "sayali",
+      "signupemail": "sayalimungekar23@gmail.com",
+      "signuppassword": "153465465489"
+    },
+    {
+      "id": "aaac",
+      "signupName": "vaishu",
+      "signupemail": "vaishu@gmail.com.in",
+      "signuppassword": "123156465464"
+    },
+    {
+      "id": "b57c",
+      "signupName": "Anish",
+      "signupemail": "anish24@gmail.com",
+      "signuppassword": "12345678"
+    }
+  ],
+  "admin": [
+    {
+      "id": "9c33",
+      "name": "Admin",
+      "email": "admin@gmail.in",
+      "password": "adminadmin"
+    }
+  ]
+}

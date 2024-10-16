@@ -1,0 +1,94 @@
+<app-header></app-header>
+
+<div class="all-mens-container container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-6 my-3" *ngFor="let data of getShoesData">
+      <div class="img-wrapper text-left">
+        <div class="heart-icon text-end px-3 py-2 fs-5">
+          <button class="btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <img [src]="data.src" alt="Adidas Shoes" class="img-fluid product-img" />
+      </div>
+      <div class="product-price">
+        <p class="price text-left">{{ data.price }}</p>
+      </div>
+      <div class="product-details">
+        <p class="mb-2 fw-bolder">{{ data.productName }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- </div>
+    <div class="col-md-4 col-6 mb-3">
+      <img
+        src="../../../assets/owl carousel/adidas/adidas1.png"
+        alt="Adidas Shoes"
+        class="img-fluid"
+      />
+      <div class="product-price">
+        <p class="price">₹100000</p>
+      </div>
+      <div class="product-details">
+        <p class="mb-2 fw-bolder">Adidas Shoes</p>
+        <p class="mb-2">Originals</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 mb-3">
+      <img
+        src="../../../assets/owl carousel/adidas/adidas1.png"
+        alt="Adidas Shoes"
+        class="img-fluid"
+      />
+      <div class="product-price">
+        <p class="price">₹100000</p>
+      </div>
+      <div class="product-details">
+        <p class="mb-2 fw-bolder">Adidas Shoes</p>
+        <p class="mb-2">Originals</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 mb-3">
+        <img
+          src="../../../assets/owl carousel/adidas/adidas1.png"
+          alt="Adidas Shoes"
+          class="img-fluid"
+        />
+        <div class="product-price">
+          <p class="price">₹100000</p>
+        </div>
+        <div class="product-details">
+          <p class="mb-2 fw-bolder">Adidas Shoes</p>
+          <p class="mb-2">Originals</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-6 mb-3">
+        <img
+          src="../../../assets/owl carousel/adidas/adidas1.png"
+          alt="Adidas Shoes"
+          class="img-fluid"
+        />
+        <div class="product-price">
+          <p class="price">₹100000</p>
+        </div>
+        <div class="product-details">
+          <p class="mb-2 fw-bolder">Adidas Shoes</p>
+          <p class="mb-2">Originals</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-6 mb-3">
+        <img
+          src="../../../assets/owl carousel/adidas/adidas1.png"
+          alt="Adidas Shoes"
+          class="img-fluid"
+        />
+        <div class="product-price">
+          <p class="price">₹100000</p>
+        </div>
+        <div class="product-details">
+          <p class="mb-2 fw-bolder">Adidas Shoes</p>
+          <p class="mb-2">Originals</p>
+        </div>
+      </div> -->
