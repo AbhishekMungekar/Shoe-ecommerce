@@ -27,9 +27,34 @@
 }
 .login-user i {
   color: var(--primary-color);
-font-weight: bold
+  font-weight: bold;
 }
 
+.login-user-details {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 150px;
+  height: 80px;
+  background-color: #ffd7008a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 17px;
+  z-index: 1;
+}
+
+.login-user-details::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 34px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffd7008a transparent;
+}
 @media (max-width: 576px) {
   .nav-content {
     /* display: block; */

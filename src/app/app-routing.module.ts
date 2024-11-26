@@ -17,6 +17,9 @@ import { AdminSidebarComponent } from './components/admin-sidebar/admin-sidebar.
 import { adminGuardsGuard } from './guards/admin-guards.guard';
 import { AdminProductlistComponent } from './components/admin-productlist/admin-productlist.component';
 import { AdminProductaddComponent } from './components/admin-productadd/admin-productadd.component';
+import { AdminEditproComponent } from './components/admin-editpro/admin-editpro.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -32,11 +35,13 @@ const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent },
   { path: 'admin-header', component: AdminHeaderComponent },
   { path: 'admin-sidebar', component: AdminSidebarComponent },
+  { path: 'wishlist', component: WishListComponent },
   {
     path: 'admin',
     component: AdminComponent,
     canActivate: [adminGuardsGuard],
     children: [
+      { path: 'admin-home', component: AdminHomeComponent },
       {
         path: 'product-list',
         component: AdminProductlistComponent,
@@ -45,9 +50,9 @@ const routes: Routes = [
         path: 'product-add',
         component: AdminProductaddComponent,
       },
+      { path: 'edit-pro/:id', component: AdminEditproComponent },
     ],
   },
-
   { path: '**', component: NotFoundComponent },
 ];
 

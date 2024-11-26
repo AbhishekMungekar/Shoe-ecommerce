@@ -31,25 +31,27 @@
     slides-per-view="3"
     *ngIf="adi"
   >
-    <swiper-slide *ngFor="let slide of shoesData.adidas" [id]="slide.id">
+    <swiper-slide *ngFor="let slide of adidas" [id]="slide.id">
       <div class="img-wrapper text-left me-2">
         <div class="heart-icon text-end px-3 py-2 fs-5">
-          <button class="btn">
+          <button
+            class="btn"
+            (click)="wishlist(slide)"
+          >
             <i class="fa-regular fa-heart"></i>
           </button>
         </div>
         <img
-          [src]="slide.src"
-          [alt]="slide.alt"
-          [title]="slide.title"
+          [src]="slide.pimg"
+          alt="Adidas shoes"
           class="img-fluid img-width"
         />
       </div>
       <div class="product-price">
-        <p class="price">{{ slide.price | currency : "INR" }}</p>
+        <p class="price">{{ slide.pprice | currency : "INR" }}</p>
       </div>
       <div class="product-details">
-        <p class="mb-2 fw-bolder">{{ slide.productName }}</p>
+        <p class="mb-2 fw-bolder">{{ slide.pname }}</p>
         <p class="mb-2">Originals</p>
       </div>
     </swiper-slide>
@@ -63,25 +65,20 @@
     slides-per-view="3"
     *ngIf="nik"
   >
-    <swiper-slide *ngFor="let slide of shoesData.nike" [id]="slide.id">
+    <swiper-slide *ngFor="let slide of nike" [id]="slide.id">
       <div class="img-wrapper text-left me-2">
         <div class="heart-icon text-end px-3 py-2 fs-5">
-          <button class="btn">
+          <button class="btn" (click)="wishlist(slide.id)">
             <i class="fa-regular fa-heart"></i>
           </button>
         </div>
-        <img
-          [src]="slide.src"
-          [alt]="slide.alt"
-          [title]="slide.title"
-          class="img-fluid img-width"
-        />
+        <img [src]="slide.pimg" alt="Nike shoes" class="img-fluid img-width" />
       </div>
       <div class="product-price">
-        <p class="price">{{ slide.price | currency : "INR" }}</p>
+        <p class="price">{{ slide.pprice | currency : "INR" }}</p>
       </div>
       <div class="product-details">
-        <p class="mb-2 fw-bolder">{{ slide.productName }}</p>
+        <p class="mb-2 fw-bolder">{{ slide.pname }}</p>
         <p class="mb-2">Originals</p>
       </div>
     </swiper-slide>
@@ -95,25 +92,24 @@
     slides-per-view="3"
     *ngIf="nb"
   >
-    <swiper-slide *ngFor="let slide of shoesData.newbalance" [id]="slide.id">
+    <swiper-slide *ngFor="let slide of newBalance" [id]="slide.id">
       <div class="img-wrapper text-left me-2">
         <div class="heart-icon text-end px-3 py-2 fs-5">
-          <button class="btn">
+          <button class="btn" (click)="wishlist(slide.id)">
             <i class="fa-regular fa-heart"></i>
           </button>
         </div>
         <img
-          [src]="slide.src"
-          [alt]="slide.alt"
-          [title]="slide.title"
+          [src]="slide.pimg"
+          alt="New Balance Shoes"
           class="img-fluid img-width"
         />
       </div>
       <div class="product-price">
-        <p class="price">{{ slide.price | currency : "INR" }}</p>
+        <p class="price">{{ slide.pprice | currency : "INR" }}</p>
       </div>
       <div class="product-details">
-        <p class="mb-2 fw-bolder">{{ slide.productName }}</p>
+        <p class="mb-2 fw-bolder">{{ slide.pname }}</p>
         <p class="mb-2">Originals</p>
       </div>
     </swiper-slide>

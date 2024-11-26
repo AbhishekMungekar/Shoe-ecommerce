@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -17,7 +17,8 @@ import { AdminApiService } from 'src/app/Service/admin-api.service';
 export class AdminLoginComponent {
   default: boolean = true;
   emailPattern = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$';
-  adminUser: any;
+
+  adminUser: any = '';
   // behaviour = new BehaviorSubject<boolean>(false);
 
   constructor(private adminapi: AdminApiService, private route: Router) {}
@@ -54,11 +55,13 @@ export class AdminLoginComponent {
     this.adminapi.postAdmin(adminSignval).subscribe(
       (res) => {
         this.adminUser = adminSignval.name;
+        console.log('This is adminuser', this.adminUser);
+
         alert(`Admin ${this.adminUser} has signup successfully`);
         // this.behaviour.next(true);
         localStorage.setItem('userLogin', 'true');
         this.signUpForm.reset();
-        this.route.navigate(['/admin']);
+        this.route.navigate([`/admin/admin-home`]);
         return res;
       },
       (err) => {
@@ -98,7 +101,7 @@ export class AdminLoginComponent {
           alert(`Admin ${loginData.email} Login Successfully`);
           localStorage.setItem('userLogin', 'true');
           this.loginForm.reset();
-          this.route.navigate(['/admin']);
+          this.route.navigate(['/admin/admin-home']);
         } else {
           alert('Something went wrong please login again');
         }

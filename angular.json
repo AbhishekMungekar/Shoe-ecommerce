@@ -82,6 +82,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_mod ules/swiper/swiper-bundle.min.css",
+              "node_mod ules/sweetalert2/src/sweetalert2.scss",
               "src/styles.css"
             ],
             "scripts": []

@@ -11,7 +11,7 @@ app-admin-sidebar {
   background-color: var(--primary-color);
   outline: none;
   color: var(--secondary-color);
-  height: calc(100vh - 4.4rem);
+  min-height: calc(100vh - 4.4rem);
   overflow-x: hidden;
   white-space: nowrap;
   transition: width 0.3s ease, left 0.3s ease;

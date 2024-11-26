@@ -23,6 +23,11 @@ import { AdminHeaderComponent } from './components/admin-header/admin-header.com
 import { AdminSidebarComponent } from './components/admin-sidebar/admin-sidebar.component';
 import { AdminProductlistComponent } from './components/admin-productlist/admin-productlist.component';
 import { AdminProductaddComponent } from './components/admin-productadd/admin-productadd.component';
+import { AdminEditproComponent } from './components/admin-editpro/admin-editpro.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 register();
 
 @NgModule({
@@ -44,6 +49,9 @@ register();
     AdminSidebarComponent,
     AdminProductlistComponent,
     AdminProductaddComponent,
+    AdminEditproComponent,
+    AdminHomeComponent,
+    WishListComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +59,7 @@ register();
     CarouselModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent],

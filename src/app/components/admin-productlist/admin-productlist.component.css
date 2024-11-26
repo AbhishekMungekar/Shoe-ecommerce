@@ -1,0 +1,32 @@
+.btn-sm {
+  margin-right: 5px;
+}
+.productlist-container {
+  min-height: calc(100vh - 7rem);
+}
+.productlist-heading {
+  color: var(--accent-color);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.edit-btn {
+  background-color: var(--discount-color);
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.view-btn {
+  background-color: var(--accent-color);
+  font-weight: bold;
+  color: black;
+}
+.delete-btn {
+  background-color: red;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.details {
+  font-size: 10px;
+}
+.details-heading {
+  font-size: 18px;
+}

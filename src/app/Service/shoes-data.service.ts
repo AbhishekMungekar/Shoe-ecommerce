@@ -169,7 +169,6 @@ export class ShoesDataService {
     }
   ];
   
-
   adidas: any[] = [
     {
       id: '',
@@ -233,7 +232,7 @@ export class ShoesDataService {
       alt: 'no shoes',
       title: '12',
       price: '520000',
-      productName: 'Adidas High Ankle',
+  productName: 'Adidas High Ankle',
     },
   ];
 

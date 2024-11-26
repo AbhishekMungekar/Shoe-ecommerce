@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AdminLoginComponent } from '../admin-login/admin-login.component';
 
 @Component({
   selector: 'app-admin-sidebar',
@@ -10,7 +11,12 @@ export class AdminSidebarComponent {
   @Input() sidenavbar: Boolean = false;
 
   navList: any[] = [
-    { id: 1, itag: 'fa-solid fa-home', title: 'Home' },
+    {
+      id: 1,
+      itag: 'fa-solid fa-home',
+      title: 'Home',
+      routerlink: 'admin-home',
+    },
     {
       id: 2,
       itag: 'fa-solid fa-book-open',
