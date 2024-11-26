@@ -1,4 +1,5 @@
 import { UpperCasePipe } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
@@ -6,7 +7,9 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserApiService } from 'src/app/Service/user-api.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-header',
@@ -17,8 +20,25 @@ export class HeaderComponent {
   discount: boolean = true;
   patternRequired = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$';
   userName: any;
+  userEmail: any;
+  storedData: any;
+  showPopupUser = false;
+  loginUser: any;
+  logOutBtn: any;
 
-  constructor(private userService: UserApiService) {}
+  constructor(private userService: UserApiService, private route: Router) {}
+
+  ngOnInit() {
+    const storedData = localStorage.getItem('loginUser');
+    if (storedData) {
+      const user = JSON.parse(storedData); // Convert the string back to an object
+      this.userEmail = user.email; // Access the email
+      this.loginUser = false;
+    } else {
+      this.userEmail = 'No user login yet'; // Access the email
+      this.loginUser = true;
+    }
+  }
 
   hideDiscount() {
     this.discount = false;
@@ -48,8 +68,21 @@ export class HeaderComponent {
 
       if (user) {
         this.userName = user.signupName;
-        alert(`${this.userName } user login`);
+        // alert(`${this.userName} user login`);
+        Swal.fire({
+          title: this.userName,
+          text: 'You have LOGIN successfully',
+          icon: 'success',
+        });
         this.loginForm.reset();
+        const userValue = {
+          id: user.id,
+          email: user.signupemail,
+        };
+        localStorage.setItem('loginUser', JSON.stringify(userValue));
+        this.userEmail = userValue.email;
+        this.loginUser = false;
+        // this.logOutBtn = true;
       } else {
         alert('Something went wrong');
       }
@@ -84,10 +117,17 @@ export class HeaderComponent {
 
     this.userService.postData(signUpValue).subscribe(
       (res) => {
-        this.userName = signUpValue.signupName;
+        this.userName = res.signupName;
         alert(`${this.userName} you have successfully login`);
         this.signupForm.reset();
-        return res;
+        // const userValue = {
+        //   id: res.id,
+        //   email: res.signupemail,
+        // };
+        localStorage.setItem('loginUser', JSON.stringify(res));
+        this.userEmail = res.email;
+        this.loginUser = false;
+        // return res;
       },
       (err) => {
         alert('Something went wrong.Please signup again');
@@ -97,5 +137,16 @@ export class HeaderComponent {
 
   getControlSignUp(name: any): AbstractControl | null {
     return this.signupForm.get(name);
+  }
+
+  togglePopup() {
+    this.showPopupUser = !this.showPopupUser;
+  }
+
+  logoutUser() {
+    localStorage.removeItem('loginUser');
+    this.userEmail = 'No user Login yet';
+    this.loginUser = true;
+    // this.logOutBtn = false;
   }
 }

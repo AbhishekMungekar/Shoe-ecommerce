@@ -39,28 +39,57 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
     </form>
-    <div class="login">
+    <div class="login" *ngIf="loginUser">
       <button
         type="button"
         class="btn"
         data-bs-toggle="modal"
         data-bs-target="#loginModal"
+        style="border: 1px solid var(--secondary-color)"
       >
-        <i class="fa-regular fa-user" style="color: var(--secondary-color)"></i>
+        <!-- <i class="fa-regular fa-user" style="color: var(--secondary-color)"></i> -->
+        <span style="color: var(--secondary-color)">Login/SignUp</span>
       </button>
     </div>
     <div class="wishlist-cart">
-      <button type="button" class="btn">
-        <i
-          class="fa-regular fa-heart"
-          style="color: var(--secondary-color)"
-        ></i>
-      </button>
+      <a routerLink="/wishlist">
+        <button type="button" class="btn">
+          <i
+            class="fa-regular fa-heart"
+            style="color: var(--secondary-color)"
+          ></i>
+        </button>
+      </a>
       <button class="btn">
         <i
           class="fa-solid fa-cart-shopping"
           style="color: var(--secondary-color)"
         ></i>
+      </button>
+      <button class="btn" (click)="togglePopup()">
+        <i class="fa-regular fa-user" style="color: var(--secondary-color)"></i>
+        <div
+          *ngIf="showPopupUser"
+          class="popup"
+          [ngClass]="{
+            'popup-visible': showPopupUser,
+            'popup-hidden': !showPopupUser
+          }"
+        >
+          <div class="popup-content">
+            <!-- *ngIf="loggedInUser; else notLoggedIn" -->
+            <p>
+              Logged in as: <strong> {{ userEmail }}</strong>
+            </p>
+            <ng-template #notLoggedIn>
+              <p>User not logged in.</p>
+            </ng-template>
+            <button class="logout-btn" (click)="logoutUser()" *ngIf="!loginUser">
+              <!-- *ngIf="loggedInUser" -->
+              Logout
+            </button>
+          </div>
+        </div>
       </button>
     </div>
   </div>
@@ -323,13 +352,22 @@
                 getControlSignUp('signupName')?.touched
               "
             >
-              <p class="error-msg" *ngIf="getControlSignUp('signupName')?.errors?.['required']">
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signupName')?.errors?.['required']"
+              >
                 This field is required
               </p>
-              <p class="error-msg" *ngIf="getControlSignUp('signupName')?.errors?.['minlength']">
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signupName')?.errors?.['minlength']"
+              >
                 Name should be atleast 3 character
               </p>
-              <p class="error-msg" *ngIf="getControlSignUp('signupName')?.errors?.['maxlength']">
+              <p
+                class="error-msg"
+                *ngIf="getControlSignUp('signupName')?.errors?.['maxlength']"
+              >
                 Name should be maximum 20 characters
               </p>
             </div>

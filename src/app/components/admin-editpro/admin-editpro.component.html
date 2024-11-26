@@ -2,9 +2,12 @@
   class="add-product-container px-5 py-3 fw-bolder text-capitalize"
   style="background-color: var(--admin-bg)"
 >
-  <h2 class="productadd-heading mt-3 mb-5 text-center">Add New Product</h2>
+  <h2 class="productadd-heading mt-3 mb-5 text-center">Edit Product</h2>
 
-  <form [formGroup]="productAdd" (ngSubmit)="productAddFun(productAdd.value)">
+  <form
+    [formGroup]="productEdit"
+    (ngSubmit)="productEditFun()"
+  >
     <div class="row">
       <div class="input-container col-md-6 d-flex flex-column pb-4">
         <label for="productname" class="label-input mb-2"
@@ -138,7 +141,6 @@
           type="text"
           id="img"
           class="input-box rounded form-control-sm p-2"
-          placeholder="Please enter image url"
           formControlName="pimg"
         />
         <div *ngIf="getAddName('pimg')?.errors && getAddName('pimg')?.touched">
@@ -173,6 +175,7 @@
           </p>
         </div>
       </div>
+
     </div>
 
     <div class="row">
@@ -212,7 +215,7 @@
       <button
         type="submit"
         class="btn p-3 text-center"
-        [disabled]="productAdd.invalid"
+        [disabled]="productEdit.invalid"
       >
         Add Product
       </button>

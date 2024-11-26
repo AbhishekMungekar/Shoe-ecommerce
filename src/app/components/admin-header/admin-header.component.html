@@ -14,8 +14,14 @@
     </form>
   </div>
   <div class="nav-buttons mx-3">
-    <button class="btn login-user">
+    <button class="btn login-user" (click)="loginClickToogle()">
       <i class="fa-regular fa-user"></i>
     </button>
+    <div class="login-user-details rounded" [hidden]="!loginClick">
+      <button class="btn btn-danger text-light" (click)="adminLogout()">
+        Logout
+      </button>
+     
+    </div>
   </div>
 </div>

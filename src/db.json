@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "id": "4898",
-      "email": "abhishek43@gmail.com",
-      "password": "12313651564651"
-    },
-    {
       "id": "dbb3",
       "signupName": "abhishek",
       "signupemail": "abhishekmungekar15@gmail.com",
@@ -28,6 +23,12 @@
       "signupName": "Anish",
       "signupemail": "anish24@gmail.com",
       "signuppassword": "12345678"
+    },
+    {
+      "id": "4865",
+      "signupName": "Abhishek",
+      "signupemail": "abhishekmungekar24@gmail.com",
+      "signuppassword": "12345678"
     }
   ],
   "admin": [
@@ -36,6 +37,315 @@
       "name": "Admin",
       "email": "admin@gmail.in",
       "password": "adminadmin"
+    },
+    {
+      "id": "71ce",
+      "name": "Abhishek",
+      "email": "abhishekmungekar@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "e202",
+      "name": "umesh",
+      "email": "umesh@133gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "2b4a",
+      "name": "newadmin",
+      "email": "newadmin@gmail.com",
+      "password": "newadmin"
+    },
+    {
+      "id": "3f03",
+      "name": "sayali",
+      "email": "sayali@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "a960",
+      "name": "kalpesh",
+      "email": "kalpesh@gmail.com",
+      "password": "kalpeshayare"
+    }
+  ],
+  "products": [
+    {
+      "id": "5967",
+      "pname": "Adidas Kaiser 5 Liga",
+      "plabel": "Adidas",
+      "pprice": "20000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/adidas/adidas1.png",
+      "pdes": "It is very comfortable to use and trending shoes. new launch shoes for styling ",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "80c7",
+      "pname": "Adidas Samba OG",
+      "plabel": "Adidas",
+      "pprice": "40000",
+      "ptags": "style,dancing,workout",
+      "pimg": "../../../assets/owl carousel/adidas/adidas2.png",
+      "pdes": "Designed for those who prioritize performance and elegance, Adidas shoes feature cutting-edge technology for superior cushioning and support. The breathable mesh fabric ensures a snug fit, while the lightweight design allows for maximum agility. ",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "d0f3",
+      "pname": "Y-3 Yohji Yamamoto",
+      "plabel": "Adidas",
+      "pprice": "10000",
+      "ptags": "style,dancing ",
+      "pimg": "../../../assets/owl carousel/adidas/adidas3.png",
+      "pdes": "Designed for those who prioritize performance and elegance, Adidas shoes feature cutting-edge technology for superior cushioning and support. The breathable mesh fabric ensures a snug fit, while the lightweight design allows for maximum agility.  ",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "a0a2",
+      "pname": "Adidas Black Shoes",
+      "plabel": "Adidas",
+      "pprice": "10000",
+      "ptags": "Running , work",
+      "pimg": "../../../assets/owl carousel/adidas/adidas4.png",
+      "pdes": "Step up your style with Adidas Black Shoes – a perfect blend of comfort, durability, and sleek design. Ideal for everyday wear and sports, these shoes deliver unmatched performance and a modern look",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "c3fb",
+      "pname": "Adidas Campus",
+      "plabel": "Adidas",
+      "pprice": "35000",
+      "ptags": "Running , Dancing",
+      "pimg": "../../../assets/owl carousel/adidas/adidas5.png",
+      "pdes": "Redefine casual style with Adidas Campus sneakers – featuring a timeless design, premium suede upper, and unmatched comfort. Perfect for a laid-back yet trendy look",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "202e",
+      "pname": "Adidas blue shoes",
+      "plabel": "Adidas",
+      "pprice": "50000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/adidas/adidas6.png",
+      "pdes": "Step up your style with Adidas Blue Shoes – a perfect blend of comfort, durability, and sleek design. Ideal for everyday wear and sports, these shoes deliver unmatched performance and a modern look.",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "e8dd",
+      "pname": "Adidas superstar",
+      "plabel": "Adidas ",
+      "pprice": "880000",
+      "ptags": "Dancing , workout",
+      "pimg": "../../../assets/owl carousel/adidas/adidas7.png",
+      "pdes": "Elevate your streetwear game with Adidas Superstar sneakers – iconic design, durable leather upper, and signature shell toe for timeless style and all-day comfort.",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "67b7",
+      "pname": "Adidas High Ankle",
+      "plabel": "Adidas",
+      "pprice": "520000",
+      "ptags": "Party, dancing and workout",
+      "pimg": "../../../assets/owl carousel/adidas/adidas8.png",
+      "pdes": "Make a bold statement with Adidas High Ankle sneakers – featuring superior support, sleek design, and premium comfort for both style and performance.",
+      "pbrand": "Adidas"
+    },
+    {
+      "id": "ff2b",
+      "pname": "Nike Blazzers",
+      "plabel": "Nike",
+      "pprice": "40000",
+      "ptags": "Party, dancing and workout",
+      "pimg": "../../../assets/owl carousel/nike/nike1.png",
+      "pdes": "Step into iconic style with Nike Blazers – featuring a vintage-inspired design, premium materials, and unmatched comfort for a bold, timeless look.",
+      "pbrand": "Nike"
+    },
+    {
+      "id": "be48",
+      "pname": "Nike Shoes",
+      "plabel": "Nike",
+      "pprice": "15000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/nike/nike2.png",
+      "pdes": "Discover the perfect blend of fashion and function with Nike-style shoes – designed for comfort, durability, and a sleek, modern aesthetic to elevate your everyday look",
+      "pbrand": "Nike"
+    },
+    {
+      "pname": "Black & White Shoe",
+      "plabel": "Nike",
+      "pprice": "10000",
+      "ptags": "Running , work",
+      "pimg": "../../../assets/owl carousel/nike/nike3.png",
+      "pdes": "Achieve effortless style with Nike Black & White Shoes – featuring a sleek design, premium materials, and exceptional comfort for both casual wear and athletic performance",
+      "pbrand": "Nike",
+      "id": "f9d4"
+    },
+    {
+      "id": "8c0d",
+      "pname": "Nike Travis Scott ",
+      "plabel": "Travis Scott ",
+      "pprice": "50000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/nike/nike4.png",
+      "pdes": "Stand out with the exclusive Travis Scott sneakers – featuring bold designs, premium craftsmanship, and signature details that redefine streetwear style",
+      "pbrand": "Nike"
+    },
+    {
+      "id": "dcc7",
+      "pname": "Nike White Shoes",
+      "plabel": "White shoes",
+      "pprice": "35000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/nike/nike5.png",
+      "pdes": "Stay fresh with Nike White Shoes – combining sleek design, premium comfort, and versatile style that effortlessly elevates any outfit",
+      "pbrand": "Nike"
+    },
+    {
+      "id": "9c25",
+      "pname": "Nike Air Force",
+      "plabel": "Air Force",
+      "pprice": "58000",
+      "ptags": "style,dancing,workout",
+      "pimg": "../../../assets/owl carousel/nike/nike6.png",
+      "pdes": "Step into timeless style with Nike Air Force – featuring iconic design, durable construction, and unmatched comfort for everyday wear and beyond",
+      "pbrand": "Nike"
+    },
+    {
+      "id": "7e23",
+      "pname": "Nike brown shoes",
+      "plabel": "nike",
+      "pprice": "88000",
+      "ptags": "hp , electronics",
+      "pimg": "../../../assets/owl carousel/nike/nike7.png",
+      "pdes": "Add a touch of sophistication with Nike Brown Shoes – offering a perfect balance of style, comfort, and durability for both casual and active wear.",
+      "pbrand": "Nike"
+    },
+    {
+      "id": "f0fc",
+      "pname": "Nike Black shoes",
+      "plabel": "Black ",
+      "pprice": "114000",
+      "ptags": "nike",
+      "pimg": "../../../assets/owl carousel/nike/nike8.png",
+      "pdes": "Stay fresh with Nike Black Shoes – combining sleek design, premium comfort, and versatile style that effortlessly elevates any outfit",
+      "pbrand": "Nike"
+    },
+    {
+      "id": "c6d4",
+      "pname": "NB Trending Shoes",
+      "plabel": "Trending Shoes",
+      "pprice": "88000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/new balance/nb1.png",
+      "pdes": "Stay fresh with NB trending Shoes – combining sleek design, premium comfort, and versatile style that effortlessly elevates any outfit",
+      "pbrand": "Newbalance"
+    },
+    {
+      "id": "d90e",
+      "pname": "NB 550",
+      "plabel": "550",
+      "pprice": "88000",
+      "ptags": "style,dancing,workout",
+      "pimg": "../../../assets/owl carousel/new balance/nb2.png",
+      "pdes": "Upgrade your sneaker game with the New Balance 550 – featuring a classic design, premium leather upper, and superior comfort, perfect for both everyday wear and athletic style.",
+      "pbrand": "Newbalance"
+    },
+    {
+      "id": "dac1",
+      "pname": "NB Black shoes",
+      "plabel": "NB",
+      "pprice": "20000",
+      "ptags": "Running , work",
+      "pimg": "../../../assets/owl carousel/new balance/nb3.png",
+      "pdes": "Add a touch of sophistication with NB Black Shoes – offering a perfect balance of style, comfort, and durability for both casual and active wear.\"",
+      "pbrand": "Newbalance"
+    },
+    {
+      "id": "d918",
+      "pname": "NB Cream Shoes",
+      "plabel": "Cream Shoes",
+      "pprice": "88000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/new balance/nb4.png",
+      "pdes": "Stand out with the exclusive NB Brown  sneakers – featuring bold designs, premium craftsmanship, and signature details that redefine streetwear style.",
+      "pbrand": "Newbalance"
+    },
+    {
+      "id": "eb6c",
+      "pname": "NB Zig Zag Shoes",
+      "plabel": "NB",
+      "pprice": "84000",
+      "ptags": "style,dancing,workout",
+      "pimg": "../../../assets/owl carousel/new balance/nb5.png",
+      "pdes": "Make a statement with New Balance Zig Zag Shoes – featuring a unique zigzag design, premium cushioning, and durable construction, offering both style and comfort for every step.",
+      "pbrand": "Newbalance"
+    },
+    {
+      "id": "7a7d",
+      "pname": "NB Brown Shoes",
+      "plabel": "Brown Shoes",
+      "pprice": "52000",
+      "ptags": "Running , work ",
+      "pimg": "../../../assets/owl carousel/new balance/nb6.png",
+      "pdes": "Boost your performance with New Balance Brown Running Shoes – designed for maximum comfort, support, and durability, with a sleek brown color that blends style with function.",
+      "pbrand": "Newbalance"
+    }
+  ],
+  "wishList": [
+    {
+      "id": "5967",
+      "pname": "Adidas Kaiser 5 Liga",
+      "plabel": "Adidas",
+      "pprice": "20000",
+      "ptags": "style,dancing",
+      "pimg": "../../../assets/owl carousel/adidas/adidas1.png",
+      "pdes": "It is very comfortable to use and trending shoes. new launch shoes for styling ",
+      "pbrand": "Adidas",
+      "userId": "4865"
+    },
+    {
+      "id": "80c7",
+      "pname": "Adidas Samba OG",
+      "plabel": "Adidas",
+      "pprice": "40000",
+      "ptags": "style,dancing,workout",
+      "pimg": "../../../assets/owl carousel/adidas/adidas2.png",
+      "pdes": "Designed for those who prioritize performance and elegance, Adidas shoes feature cutting-edge technology for superior cushioning and support. The breathable mesh fabric ensures a snug fit, while the lightweight design allows for maximum agility. ",
+      "pbrand": "Adidas",
+      "userId": "4865"
+    },
+    {
+      "id": "80c7",
+      "pname": "Adidas Samba OG",
+      "plabel": "Adidas",
+      "pprice": "40000",
+      "ptags": "style,dancing,workout",
+      "pimg": "../../../assets/owl carousel/adidas/adidas2.png",
+      "pdes": "Designed for those who prioritize performance and elegance, Adidas shoes feature cutting-edge technology for superior cushioning and support. The breathable mesh fabric ensures a snug fit, while the lightweight design allows for maximum agility. ",
+      "pbrand": "Adidas",
+      "userId": "b57c"
+    },
+    {
+      "id": "d0f3",
+      "pname": "Y-3 Yohji Yamamoto",
+      "plabel": "Adidas",
+      "pprice": "10000",
+      "ptags": "style,dancing ",
+      "pimg": "../../../assets/owl carousel/adidas/adidas3.png",
+      "pdes": "Designed for those who prioritize performance and elegance, Adidas shoes feature cutting-edge technology for superior cushioning and support. The breathable mesh fabric ensures a snug fit, while the lightweight design allows for maximum agility.  ",
+      "pbrand": "Adidas",
+      "userId": "b57c"
+    },
+    {
+      "id": "a0a2",
+      "pname": "Adidas Black Shoes",
+      "plabel": "Adidas",
+      "pprice": "10000",
+      "ptags": "Running , work",
+      "pimg": "../../../assets/owl carousel/adidas/adidas4.png",
+      "pdes": "Step up your style with Adidas Black Shoes – a perfect blend of comfort, durability, and sleek design. Ideal for everyday wear and sports, these shoes deliver unmatched performance and a modern look",
+      "pbrand": "Adidas",
+      "userId": "b57c"
     }
   ]
 }

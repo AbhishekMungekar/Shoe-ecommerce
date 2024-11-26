@@ -2,7 +2,6 @@
 <main>
   <app-admin-sidebar  [sidenavbar]="sideNavStatus" [ngClass]="{ 'sidenav-width': sideNavStatus }"></app-admin-sidebar>
   <div class="content p-3 body-trimmed"  [ngClass]="{ 'content-width': sideNavStatus }">
-    
      <router-outlet></router-outlet>
   </div>
 </main>
